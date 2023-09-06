@@ -1,0 +1,104 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 400px;
+    height: 400px;
+
+    margin-top: -200px;
+    margin-left: -200px;
+
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+
+    overflow: hidden;
+    background: linear-gradient(to top right, #43389F 0%, #4ec6ca 100%); 
+    color: #333;
+    
+    font-family: 'Courier New', 'Courier', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.one-line,
+.one {
+	position: absolute;
+	box-shadow:(0px 0px 10px rgba(0, 0, 0, 0.3));
+	background-color: white;
+	border-radius: 2px;
+}
+
+
+.one-line {
+	width: 40px;
+	height: 20px;
+	
+	left: -125px;
+	top: -80px;
+	
+	rotate: 140deg;
+}
+
+.one {
+	z-index: 10;
+	width: 24px;
+	height: 100px;
+	
+	left: -98px;
+	top: -90px;
+}
+
+
+.f-zero,
+.s-zero {
+	position: absolute;
+	box-shadow:(0px 0px 10px rgba(0, 0, 0, 0.3));
+	
+	width: 50px;
+	height: 50px;
+	
+	top: -90px;
+	
+	border: 26px solid white;
+	border-radius: 50%;
+}
+
+.f-zero {
+	z-index: 9;
+	left: -82px;
+}
+
+.s-zero {
+	z-index: 8;
+	left: 0px;
+}
+
+
+.days,
+.chall {
+	display: block;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+}
+
+.days {
+	font-size: 82px;
+	margin-top: 200px;
+}
+
+.chall {
+	font-size: 23px;
+	letter-spacing: 1px;
+	margin-top: -20px;
+}
