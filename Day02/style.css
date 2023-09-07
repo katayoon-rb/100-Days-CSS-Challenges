@@ -26,11 +26,13 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
+
+  pointer: cursor;
 	
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 	.line-con.close .line:nth-child(1){
 		animation: line1-close 1s forwards;
