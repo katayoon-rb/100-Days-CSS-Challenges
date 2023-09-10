@@ -1,0 +1,200 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+    overflow: hidden;
+    background: #42A7A1;
+    color: #333;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.card {
+	border-radius: 3px;
+	box-shadow: 10px 10px 15px 0 rgba(0,0,0,0.3);
+	height: 220px;
+	width: 280px;
+	background-color: #fff;
+}
+
+.big { font-weight: 600; font-size: 14px; text-transform: uppercase; }
+.small { font-weight: 400; font-size: 11px; }
+
+.header {
+	height: 60px;
+	width: 100%;
+	
+	background: #F1BA64;
+	color: #fff;
+	
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	
+	padding: 0 15px;
+	box-sizing: border-box;
+	
+	span { display: block; }
+	.title, .type { line-height:1.6; }
+}
+	
+
+
+.second-part {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding: 15px;
+	
+	.red, .blue {
+		height: 3px;
+		width: 11px;
+		
+		display: block;
+		border-radius: 3px;
+		
+		margin-right: 5px;
+	}
+	.red { background-color:#fa7373; }
+	.blue { background-color:#7ba2ff; margin-left:15px; }
+	div { display: flex; align-items: center; }
+	span { font-size:10px; color:#606060; }
+}
+
+
+.graph {
+	position: relative;
+	height: 81px;
+	width: 260px;
+	margin: 0 auto;
+}
+
+.line1, .line2, .line3 {
+	z-index: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 1px;
+	background: #f2f2f2;
+}
+	.line2 { top: 40px; }
+	.line3 { top: 80px; }
+
+
+.line {
+	svg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+	}
+        polyline {
+			fill: none;
+			stroke-width: 2;
+			stroke-linecap: round;
+        }
+			polyline.red { stroke: #fa7373; }
+            polyline.blue { stroke: #7ba2ff; }
+
+	[class^="point-"] {
+		position: absolute;
+		width: 6px;
+		height: 6px;
+		border-radius: 3px;
+		cursor: pointer;
+		z-index: 10;
+
+        &:hover .pointvalue {
+            visibility: visible;
+            opacity: 1;
+            transform: translate3d(-50%, 0, 0);
+        }
+ 	}
+}
+		.pointvalue {
+		position: absolute;
+		bottom: 13px;
+		left: 50%;
+		
+		transform: translate3d(-50%, 10px, 0);
+		
+		font-weight: 600;
+		font-size: 11px;
+		line-height: 11px;
+		color: #fff;
+		
+		padding: 8px 6px;
+		border-radius: 3px;
+		
+		visibility: hidden;
+		opacity: 0;
+		transition: transform 0.4s ease-out 0s, opacity 0.4s ease-out 0s;
+
+			&:after {
+				position: absolute;
+				display: block;
+				content: '';
+				
+				height: 6px;
+				width: 6px;
+				
+				left: 50%;
+				margin-left: -3px;
+				bottom: -3px;
+				transform: rotate(45deg);
+			}
+	    }
+
+
+.red {
+	[class^="point-"], .pointvalue, .pointvalue:after { background-color: #fa7373; }
+	.point-1 { left: 7px; top: 43px; }
+	.point-2 { left: 48px; top: 9px; }
+	.point-3 { left: 88px; top: 20px; }
+	.point-4 { left: 128px; top: 8px; }
+	.point-5 { left: 169px; top: 35px; }
+	.point-6 { left: 209px; top: 45px; }
+	.point-7 { left: 249px; top: 16px; }
+}
+
+.blue {
+	[class^="point-"], .pointvalue, .pointvalue:after { background-color: #7ba2ff; }
+	.point-1 { left: 7px; top: 58px; }
+	.point-2 { left: 48px; top: 47px; }
+	.point-3 { left: 88px; top: 62px; }
+	.point-4 { left: 128px; top: 52px; }
+	.point-5 { left: 169px; top: 58px; }
+	.point-6 { left: 209px; top: 71px; }
+	.point-7 { left: 249px; top: 61px; }
+}
+
+
+.days { width: 280px; margin: 0 auto; }
+.day {
+	display: block;
+	float: left;
+	
+	width: 14.27%;
+	font-size: 9px;
+	color: #949494;
+	
+	line-height: 30px;
+	text-align: center;
+}
