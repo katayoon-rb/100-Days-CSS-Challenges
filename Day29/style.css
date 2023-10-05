@@ -1,0 +1,100 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400);
+
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  background: #5CA4EA;
+
+  color: #fff;
+  font-family: "Open Sans", Helvetica, sans-serif;
+}
+
+.search {
+  position: absolute;
+  top: 180px;
+  left: 70px;
+
+  width: 260px;
+  font-size: 0;
+  background: #fff;
+  box-shadow: 4px 8px 12px 0 rgba(0, 0, 0, 0.1);
+}
+  .searchfield {
+    float: left;
+    width: 205px;
+    height: 40px;
+
+    border: none;
+    border-radius: 0;
+
+    color: #4D8DCB;
+    font-size: 13px;
+    font-weight: 600;
+
+    padding: 0 0 0 15px;
+    background: #fff;
+  }
+  .button {
+    position: relative;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    border-radius: 0;
+
+    background: #fff;
+    padding: 0;
+
+    color: #5CA4EA;
+    font-size: 20px;
+  }
+    .button span { position: relative; top: -1px; }
+
+  .suggestions {
+    background: #fff;
+    padding: 0 15px;
+    margin: 0;
+
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    list-style: none;
+    color: #6E6E6E;
+  }
+    .suggestions.active { border-top: 1px solid #5CA4EA; }
+    .suggestions li {
+      margin: 18px 0;
+      padding: 0;
+      cursor: pointer;
+    }
+    .suggestions li:hover { color: #4D8DCB; }
+    .suggestions li b { font-weight: 600; }
+
+
+    
+
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after { clear: both; }
+.clearfix { zoom: 1; }
+
+*:focus { outline: none; }
+:placeholder-shown { color: #A4B9CE; }
