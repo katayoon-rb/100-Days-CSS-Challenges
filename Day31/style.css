@@ -1,0 +1,56 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  background: #4C4BA2;
+}
+
+.dots { padding: 28px 0 0 194px; }
+
+.dot {
+  width: 12px;
+  height: 12px;
+
+  background: #fff;
+  border-radius: 50%;
+  margin: 5px 0;
+
+  animation: dot ease-in-out infinite;
+}
+
+
+.dot-1 { animation-duration: 1016.9491525424ms; }
+.dot-2 { animation-duration: 1034.4827586207ms; }
+.dot-3 { animation-duration: 1052.6315789474ms; }
+.dot-4 { animation-duration: 1071.4285714286ms }
+.dot-5 { animation-duration: 1090.9090909091ms; }
+.dot-6 { animation-duration: 1111.1111111111ms; }
+.dot-7 { animation-duration: 1132.0754716981ms; }
+.dot-8 { animation-duration: 1153.8461538462ms; }
+.dot-9 { animation-duration: 1176.4705882353ms; }
+.dot-10 { animation-duration: 1200ms; }
+.dot-11 { animation-duration: 1224.4897959184ms; }
+.dot-12 { animation-duration: 1250ms; }
+.dot-13 { animation-duration: 1276.5957446809ms; }
+.dot-14 { animation-duration: 1304.347826087ms; }
+.dot-15 { animation-duration: 1333.3333333333ms; }
+.dot-16 { animation-duration: 1363.6363636364ms; }
+.dot-17 { animation-duration: 1395.3488372093ms; }
+.dot-18 { animation-duration: 1428.5714285714ms; }
+.dot-19 { animation-duration: 1463.4146341463ms; }
+.dot-20 { animation-duration: 1500ms; }
+
+
+@keyframes dot {
+  	0%, 100% { transform: translate3d(50px, 0, 0); }
+  	50% { transform: translate3d(-50px, 0, 0); }
+}
