@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700");
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: linear-gradient(to top right, #96ACB7 0%, #D4E4BC 100%);
+
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+}
+
+.counter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 130px;
+  height: 40px;
+  background-color: white;
+
+  border-radius: 40px;
+  box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+
+.subtract {
+  cursor: pointer;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  margin-left: 5px;
+  background-color: transparent;
+  transition: background-color 0.25s ease-out;
+}
+  .subtract .line { background-color: #E26E6E; }
+  .subtract:hover { background-color: #E26E6E; transition: background-color 0.25s ease-out; }
+
+
+
+.add {
+  cursor: pointer;
+  position: relative;
+
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  margin-right: 5px;
+}
+  .add .line { background-color: #8ED273; }
+  .add:hover { background-color: #8ED273; transition: background-color 0.25s ease-out; }
+
+
+
+
+.subtract:hover .line,
+.add:hover .line {
+  background-color: white;
+  transition: background-color 0.25s ease-out;
+}
+
+
+.line {
+  height: 1.5px;
+  width: 16px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+  .line-2 {
+    transform: rotate(90deg) translate(-50%, -50%);
+    transform-origin: 0% 0%;
+  }
+
+.count {
+  color: #6A85A0;
+  font-size: 20px;
+  font-weight: 600;
+  transform: scale(1);
+  opacity: 1;
+}
+  .adding { animation: adding 0.3s ease-in; }
+  .subtracting { animation: subtracting 0.3s ease-in; }
+
+
+
+  
+@keyframes adding {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0; }
+  50.01% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes subtracting {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(0.8); opacity: 0; }
+  50.01% { transform: scale(1.4); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
