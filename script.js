@@ -21,4 +21,4 @@ function importDays(start, end) {
     }
 }
 
-importDays(1, 47)  // CHANGE //
+importDays(1, 48)  // CHANGE //
