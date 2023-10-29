@@ -1,0 +1,68 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+
+  background: #75704E;
+  color: #fff;
+  font-family: "Open Sans", Helvetica, sans-serif;
+}
+
+.trigger {
+  cursor: pointer;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+
+  width: 400px;
+  height: 10px;
+}
+
+.plane {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  
+  width: 400px;
+  height: 200px;
+  background: #CACC90;
+
+  overflow: hidden;
+  transform-origin: 50% 0%;
+  transition: all 0.4s ease-in-out;
+}
+
+.text-back,
+.text-front {
+  pointer-events: none;
+  position: absolute;
+  width: 400px;
+  top: 169px;
+
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 700;
+  text-align: center;
+}
+  .text-back {
+    z-index: 2;
+    color: #F4EBBE;
+  }
+  .text-front {
+    z-index: 10;
+    color: transparent;
+    text-shadow: 0 0 10px rgba(244, 235, 190, 0.9);
+    transition: all 0.4s ease-in-out;
+  }
