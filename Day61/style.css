@@ -1,0 +1,40 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+
+  background: #333;
+  color: #fff;
+  font-family: "Open Sans", Helvetica, sans-serif;
+}
+
+.gradient-1,
+.gradient-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 400px;
+  height: 400px;
+}
+  .gradient-1 { background: linear-gradient(135deg, #DDA77B 0%, #945D5E 100%); }
+  .gradient-2 {
+    z-index: 2;
+    opacity: 0;
+    background: linear-gradient(135deg, #71677C 0%, #37123C 100%);
+    animation: gradient 4s ease-in-out infinite;
+  }
+
+@keyframes gradient {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
