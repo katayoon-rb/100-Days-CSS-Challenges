@@ -1,0 +1,121 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+
+  background: #54494B;
+  color: #fff;
+  font-family: "Open Sans", Helvetica, sans-serif;
+}
+
+.puppet {
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+
+.head {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 10px auto;
+  background: #F1F7ED;
+  border-radius: 50%;
+}
+
+.body {
+  position: relative;
+  height: 100px;
+  width: 50px;
+  background: #F1F7ED;
+}
+  .body .arm {
+    position: absolute;
+    top: 0;
+  }
+  .body .arm-left { left: -10px; }
+    .arm-left .upper { transform: rotate(10deg); }
+    .arm-left .upper .lower { transform: rotate(-5deg); }
+
+  .body .arm-right { right: -10px; }
+    .arm-right .upper {
+      transform: rotate(-75deg);
+      animation: upper 1s ease-in-out infinite alternate;
+    }
+    .arm-right .upper .lower {
+      transform: rotate(-75deg);
+      animation: lower 1s ease-in-out infinite alternate;
+    }
+
+  .body .arm .upper {
+    position: relative;
+    height: 50px;
+    width: 16px;
+    background: #F1F7ED;
+    border-radius: 8px;
+    transform-origin: 8px 8px;
+  }
+  .body .arm .upper .lower {
+    position: absolute;
+    bottom: -36px;
+    left: 0;
+
+    height: 52px;
+    width: 16px;
+    background: #F1F7ED;
+
+    border-radius: 8px;
+    transform-origin: 8px 8px;
+  }
+
+
+  .body .leg {
+    position: absolute;
+    top: 78px;
+  }
+  .body .leg-left { left: 0px; }
+  .body .leg-right { right: 0px; }
+
+  .body .leg .upper {
+    position: relative;
+    height: 70px;
+    width: 24px;
+    background: #F1F7ED;
+    border-radius: 12px;
+    transform-origin: 12px 12px;
+  }
+  .body .leg .upper .lower {
+    position: absolute;
+    bottom: -46px;
+    left: 0;
+
+    height: 70px;
+    width: 24px;
+    background: #F1F7ED;
+    
+    border-radius: 12px;
+    transform-origin: 12px 12px;
+  }
+
+
+
+
+@keyframes upper {
+  0% { transform: rotate(-75deg); }
+  100% { transform: rotate(-85deg); }
+}
+@keyframes lower {
+  0% { transform: rotate(-75deg); }
+  100% { transform: rotate(-105deg); }
+}

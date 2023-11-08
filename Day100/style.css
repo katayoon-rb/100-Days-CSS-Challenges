@@ -1,0 +1,212 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+
+  background: #81A094;
+  color: #fff;
+  font-family: "Open Sans", Helvetica, sans-serif;
+}
+
+.word {
+  position: absolute;
+  height: 120px;
+  width: 400px;
+  top: 140px;
+  left: 0;
+}
+
+.word .light {
+  position: absolute;
+  background: #1A1E24;
+  box-shadow: 0px 0px 6px 0px #1A1E24;
+  border-radius: 3px;
+}
+.word .ee {
+  position: absolute;
+  width: 69px;
+  height: 120px;
+  top: 0;
+  left: 68px;
+}
+  .ee .left {
+    top: 0;
+    left: 0;
+    height: 120px;
+    width: 6px;
+    animation: flickr 6s ease-in-out 0.84s infinite alternate both;
+  }
+  .ee .top {
+    top: 0;
+    right: 0;
+    height: 6px;
+    width: 60px;
+    animation: flickr 6s ease-in-out 3.12s infinite alternate both;
+  }
+  .ee .middle {
+    top: 56px;
+    left: 9px;
+    height: 6px;
+    width: 50px;
+    animation: flickr 6s ease-in-out 2.32s infinite alternate both;
+  }
+  .ee .bottom {
+    bottom: 0;
+    right: 0;
+    height: 6px;
+    width: 60px;
+    animation: flickr 6s ease-in-out 1.26s infinite alternate both;
+  }
+
+  
+.word .nn {
+  position: absolute;
+  width: 85px;
+  height: 120px;
+  top: 0;
+  left: 162px;
+}
+  .nn .left {
+    top: 0;
+    left: 0;
+    height: 120px;
+    width: 6px;
+    animation: flickr 6s ease-in-out 1.21s infinite alternate both;
+  }
+  .nn .middle {
+    top: 0;
+    left: 9px;
+    height: 6px;
+    width: 135px;
+    transform-origin: 3px 3px;
+    transform: rotate(62deg);
+    animation: flickr 6s ease-in-out 1.19s infinite alternate both;
+  }
+  .nn .right {
+    top: 0;
+    right: 0;
+    height: 120px;
+    width: 6px;
+    animation: flickr 6s ease-in-out 2.67s infinite alternate both;
+  }
+
+
+.word .dd {
+  position: absolute;
+  width: 72px;
+  height: 120px;
+  top: 0;
+  left: 274px;
+}
+  .dd .left {
+    top: 0;
+    left: 0;
+    height: 120px;
+    width: 6px;
+    animation: flickr 6s ease-in-out 1.61s infinite alternate both;
+  }
+  .dd .right {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    height: 120px;
+    width: 70px;
+  }
+  .dd .right .circleBox {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    width: 70px;
+    overflow: hidden;
+  }
+    .dd .right .circleBox .circle {
+      box-sizing: border-box;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+
+      width: 120px;
+      height: 120px;
+      
+      border-style: solid;
+      border-width: 6px;
+      border-color: #1A1E24 #1A1E24 transparent transparent;
+      border-radius: 50%;
+      
+      box-shadow: 0px 0px 10px 0px #1A1E24, inset 0px 0px 10px 0px #F1F4F5;
+      transform: rotate(45deg);
+      animation: flickr-circle 6s ease-in-out 1.18s infinite alternate both;
+    }
+
+  .dd .right .topDotBox,
+  .dd .right .bottomDotBox {
+    position: absolute;
+    right: 60px;
+    width: 26px;
+    height: 26px;
+    overflow: hidden;
+  }
+  .dd .right .topDotBox { top: -10px; }
+  .dd .right .bottomDotBox { bottom: -10px; }
+  .dd .right .dot {
+    top: 10px;
+    right: -12px;
+    width: 15px;
+    height: 6px;
+    animation: flickr-dots 6s ease-in-out 1.18s infinite alternate both;
+  }
+
+
+
+
+@keyframes flickr {
+  35%, 37%, 39%, 41%, 100% {
+    background: #F1F4F5;
+    box-shadow: 0px 0px 10px 0px #F1F4F5;
+  }
+  0%, 34%, 36%, 36%, 38%, 40% {
+    background: #1A1E24;
+    box-shadow: 0px 0px 6px 0px #1A1E24;
+  }
+}
+@keyframes flickr-circle {
+  35%, 37%, 39%, 41%, 100% {
+    border-color: #F1F4F5 #F1F4F5 transparent transparent;
+    box-shadow: 0px 0px 10px 0px #F1F4F5, inset 0px 0px 10px 0px #F1F4F5;
+  }
+  0%, 34%, 36%, 36%, 38%, 40% {
+    border-color: #1A1E24 #1A1E24 transparent transparent;
+    box-shadow: 0px 0px 6px 0px #1A1E24, inset 0px 0px 6px 0px #1A1E24;
+  }
+}
+@keyframes flickr-dots {
+  35%, 37%, 39%, 41%, 100% {
+    background: #F1F4F5;
+    box-shadow: 0px 0px 9px 1px #F1F4F5;
+  }
+  0%, 34%, 36%, 36%, 38%, 40% {
+    background: #1A1E24;
+    box-shadow: 0px 0px 5px 1px #1A1E24;
+  }
+}
+@keyframes flickr-svg {
+  35%, 37%, 39%, 41%, 100% {
+    stroke: #F1F4F5;
+    filter: drop-shadow(0px 0px 5px #F1F4F5);
+  }
+  0%, 34%, 36%, 36%, 38%, 40% {
+    stroke: #1A1E24;
+    filter: drop-shadow(0px 0px 3px #1A1E24);
+  }
+}
