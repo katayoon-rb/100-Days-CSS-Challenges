@@ -7,7 +7,7 @@ function importDays(start, end) {
 
         container.innerHTML += `
             <div class="card">
-                <h2 class="num">${day}</h2>
+                <h2 class="num ${i == 100 ? `last` : ``}">${day}</h2>
                 <div class="info">
                     <h3>Day ${day}</h3>
                     <a href="Day${day}/index.html">
