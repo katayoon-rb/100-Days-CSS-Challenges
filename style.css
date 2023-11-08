@@ -80,6 +80,8 @@ body {
             box-shadow: -2px 2px 5px #2A3A32;
         }
 
+.last { width: 250px; }
+
 
 @media (max-width: 900px) {
     .container {
